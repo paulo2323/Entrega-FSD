@@ -205,12 +205,6 @@
                 pointer-events: auto;
                 display: flex;
             }
-            input{
-            display: none;
-            }
-            h2,h3{
-                display: none;
-            }
             #menu-field{
                 width: 100%;
                 height: 100%;
@@ -229,6 +223,114 @@
                 margin-right: 10px;
                 filter: invert(95%) sepia(0%) saturate(20%) hue-rotate(294deg) brightness(103%) contrast(107%);
                 width: 50px;
+            }
+            #contenedor{
+                margin-top: 4vh;
+                width: 90%;
+                height: 70vh;
+                background-color: black;
+                opacity: 90%;
+            }
+            #titulo-contenedor{
+                margin-top: 2vh;
+                margin-left: 2vh;
+            }
+            #titulo{
+                font-family: 'Anton', sans-serif;
+                font-weight: 200;
+                color: #f37124 !important;
+                letter-spacing: -5px;
+                font-size: 40px;
+                line-height: 72px;
+            }
+            #formulario{
+                width: 65%;
+                padding: 5vh;
+                display: grid;
+                grid-template-areas: "entrada1" "input1" 
+                                     "entrada2" "input2"
+                                     "entrada3" "input3" 
+                                     "entrada4" "input4"
+                                     "entrada5" "input5" 
+                                     "entrada6" "input6";
+                gap: 5px;
+                grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+                grid-template-columns: 0.5fr 0.5fr ;
+            }
+            #entrada1{
+                grid-area: entrada1;
+                grid-column: 1;
+                grid-row: 1;
+            }
+            #input1{
+                grid-area: input1;
+                grid-column: 2;
+                grid-row: 1;
+            }
+            #entrada2{
+                grid-area: entrada2;
+                grid-column: 1;
+                grid-row: 2;
+            }
+            #input2{
+                grid-area: input2;
+                grid-column: 2;
+                grid-row: 2;
+            }
+            #entrada3{
+                grid-area: entrada3;
+                grid-column: 1;
+                grid-row: 3;
+            }
+            #input3{
+                grid-area: input3;
+                grid-column: 2;
+                grid-row: 3;
+            }
+            #entrada4{
+                grid-area: entrada4;
+                grid-column: 1;
+                grid-row: 4;
+            }
+            #input4{
+                grid-area: input4;
+                grid-column: 2;
+                grid-row: 4;
+            }
+            #entrada5{
+                grid-area: entrada5;
+                grid-column: 1;
+                grid-row: 5;
+            }
+            #input5{
+                grid-area: input5;
+                grid-column: 2;
+                grid-row: 5;
+            }
+            #entrada6{
+                grid-area: entrada6;
+                grid-column: 1;
+                grid-row: 6;
+            }
+            #input6{
+                grid-area: input1;
+                grid-column: 2;
+                grid-row: 6;
+            }
+            
+            h3{
+                font-family: 'Anton', sans-serif;
+                font-weight: 600;
+                color: #ffffff !important;
+                letter-spacing: -1px;
+                font-size: 18px;
+                line-height: 72px;  
+            }
+            input{
+                margin-top: 20px;
+                height: 3vh;
+                border-radius: 5px;
+                margin-right: 75px;
             }
         }
         body{
