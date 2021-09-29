@@ -225,6 +225,11 @@
                 font-size: 56px;
                 font-family: sans-serif;
             }
+            #open{
+                margin-right: 10px;
+                filter: invert(95%) sepia(0%) saturate(20%) hue-rotate(294deg) brightness(103%) contrast(107%);
+                width: 50px;
+            }
         }
         body{
             background-color: rgb(26, 28, 34);;
@@ -234,7 +239,7 @@
 <body>
     <nav>
         <div id="menu-field">
-            <button onclick="menuclick()" id="open"><h1>Menu</h1></button>
+            <img id="open" onclick="menuclick()" src="menu.svg"/>
         </div>
         <div class="nav-field">
             <a id="link-logo"href="bar.html">
@@ -246,7 +251,7 @@
         <div class="nav-field"><a href="bar.html">RESERVAS</a></div>
         <div class="nav-field"><a href="bar.html">CONTACTO</a></div>
     </nav>
-    <div class="desplegable">asa</div>
+    <div class="desplegable"></div>
     <div id="header">
         <div id="contenedor">
             <div id="titulo-contenedor">
