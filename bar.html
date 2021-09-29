@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        nav{
+            width: 100vw;
+            height: 10vh;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .nav-field{
+            width: 10vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        a:hover{
+            opacity: 80%;
+        }
+        a{
+            margin-top: 3vh;
+            text-decoration: none;
+            font-family: 'PT Sans', sans-serif;
+            color: aliceblue;
+            font-size: 12px;
+        }
+        #logo{
+            height: 10vh;
+        }
+        #link-logo{
+            margin-top: 0;
+            height: 10vh;
+        }
+        #header{
+            background: url("header2.jpg") #000;
+            width: 100vw;
+            height: 78vh;
+            background-position:center;
+            display: flex;
+            justify-content: center;
+        }
+        
+        @media (min-width: 1240px){
+            #contenedor{
+            margin-top: 10vh;
+            width: 50vw;
+            height: 50vh;
+            background-color: black;
+            opacity: 90%;
+            }
+            #titulo-contenedor{
+                margin-top: 5vh;
+                margin-left: 5vh;
+            }
+            #titulo{
+                font-family: 'Anton', sans-serif;
+                font-weight: 600;
+                color: #f37124 !important;
+                letter-spacing: -5px;
+                font-size: 76px;
+                line-height: 72px;
+            }
+            #formulario{
+                width: 65%;
+                padding: 5vh;
+                display: grid;
+                grid-template-areas: "entrada1" "input1" "entrada2" "input2"
+                                    "entrada3" "input3" "entrada4" "input4"
+                                    "entrada5" "input5" "entrada6" "input6";
+                gap: 5px;
+                grid-template-rows: 1fr 1fr 1fr;
+                grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr;
+            }
+            #entrada1{
+                grid-area: entrada1;
+                grid-column: 1;
+                grid-row: 1;
+            }
+            #input1{
+                grid-area: input1;
+                grid-column: 2;
+                grid-row: 1;
+            }
+            #entrada2{
+                grid-area: entrada2;
+                grid-column: 3;
+                grid-row: 1;
+            }
+            #input2{
+                grid-area: input2;
+                grid-column: 4;
+                grid-row: 1;
+            }
+            #entrada3{
+                grid-area: entrada3;
+                grid-column: 1;
+                grid-row: 2;
+            }
+            #input3{
+                grid-area: input3;
+                grid-column: 2;
+                grid-row: 2;
+            }
+            #entrada4{
+                grid-area: entrada4;
+                grid-column: 3;
+                grid-row: 2;
+            }
+            #input4{
+                grid-area: input4;
+                grid-column: 4;
+                grid-row: 2;
+            }
+            #entrada5{
+                grid-area: entrada5;
+                grid-column: 1;
+                grid-row: 3;
+            }
+            #input5{
+                grid-area: input5;
+                grid-column: 2;
+                grid-row: 3;
+            }
+            #entrada6{
+                grid-area: entrada6;
+                grid-column: 3;
+                grid-row: 3;
+            }
+            #input6{
+                grid-area: input1;
+                grid-column: 4;
+                grid-row: 3;
+            }
+            h3{
+                font-family: 'Anton', sans-serif;
+                font-weight: 600;
+                color: #ffffff !important;
+                letter-spacing: -1px;
+                font-size: 18px;
+                line-height: 72px;  
+            }
+            input{
+                margin-top: 20px;
+                height: 3vh;
+                border-radius: 5px;
+                margin-right: 75px;
+            }
+            #menu-field{
+                display: none;
+            }
+        }
+        @media (max-width:400px){
+            nav{
+                width: 100vw;
+                height: 15vh;
+                background-color: rgb(0, 0, 0);
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                
+            }
+            .nav-field{
+                z-index: 2;
+                width: 80%;
+                display: inline-block;
+                justify-content: center;
+                align-items: center;
+                border-bottom: 1px solid rgba(255,255,255,.3);
+                font-size: 20px;
+                font-family: sans-serif;
+                font-weight: bold;
+                display: none;
+            }
+            #nav-field a{
+                margin-left: 10px;
+                font-size: 15px;   
+            }
+            #logo{
+              margin-top: 35px;
+            }
+            .desplegable{
+                z-index: 1;
+                position: absolute;
+                background-color: rgb(12, 12, 12);
+                width: 80% ;
+                height: 78vh;
+                display: none;
+            } 
+            .show_nav-field{
+                pointer-events: auto;
+                display: block;
+            }
+            .show_desplegable{
+                pointer-events: auto;
+                display: flex;
+            }
+            input{
+            display: none;
+            }
+            h2,h3{
+                display: none;
+            }
+            #menu-field{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+            }
+            h1{
+                margin-top: 10px;
+                margin-right: 10px;
+                color: #ffffff;
+                font-size: 56px;
+                font-family: sans-serif;
+            }
+        }
+        body{
+            background-color: rgb(26, 28, 34);;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div id="menu-field">
+            <button onclick="menuclick()" id="open"><h1>Menu</h1></button>
+        </div>
+        <div class="nav-field">
+            <a id="link-logo"href="bar.html">
+                <img id="logo" src="logo2.png">
+            </a>
+        </div>
+        <div class="nav-field"><a href="bar.html">INICIO</a></div>
+        <div class="nav-field"><a href="bar.html">LA CARTA</a></div>
+        <div class="nav-field"><a href="bar.html">RESERVAS</a></div>
+        <div class="nav-field"><a href="bar.html">CONTACTO</a></div>
+    </nav>
+    <div class="desplegable">asa</div>
+    <div id="header">
+        <div id="contenedor">
+            <div id="titulo-contenedor">
+                <h2 id="titulo">RESERVAS</h2>
+            </div>
+            <div id="formulario">
+                    <div class="entradas" id="entrada1">
+                        <h3>Nombre: </h3>
+                    </div>
+                    <input id="input1" name="Nombre" placeholder="Nombre"/>
+                    <div class="entradas" id="entrada2">
+                        <h3>Apellido: </h3>
+                    </div>
+                    <input id="input2" name="Apellido" placeholder="Apellido"/>
+                    <div class="entradas" id="entrada3">
+                        <h3>Telefono: </h3>
+                    </div>
+                    <input id="input3" name="Telefono" placeholder="Telefono"/>
+                    <div class="entradas" id="entrada4">
+                        <h3>Lugar: </h3>
+                    </div>
+                    <input id="input4" name="Lugar" placeholder="Afuera/Adentro"/>
+                    <div class="entradas" id="entrada5">
+                        <h3>Fecha: </h3>
+                    </div>
+                    <input id="input5" name="Fecha" placeholder="dd/mm/aaa"/>
+                    <div class="entradas" id="entrada6">
+                        <h3>Hora: </h3>
+                    </div>
+                    <input id="input6" name="Hora" placeholder="hh/mm"/>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
